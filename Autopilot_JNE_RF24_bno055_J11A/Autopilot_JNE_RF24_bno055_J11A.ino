@@ -177,18 +177,18 @@ COMMONS LICENSING
  // when tested summer 2013 used 2, .4, 4, 0.  Used {2, .4, 1, .000} in 2015. Used {1, .4, 2, .000} operationg without Rudder indicator
  int PID_MODE = 0; // See description PID tab.
 
- boolean Accept_Terms = 1; //  1 user must accept terms to run.  0 user accepts terms by setting this value to 0
+ boolean Accept_Terms = 0; //  1 user must accept terms to run.  0 user accepts terms by setting this value to 0
  boolean just_started = 1; // to do a second setup so get a better gyro startup
  //float Kxte[3] = {0, 0, 0}; // used for XTE PID, use this to zero out XTE tracking
  float Kxte[3] = {.36, 0, 0}; // {.2, 4, .0004} baseline; {.05, .5, .0005}last used;  0 is proportional, 1 is differential, 2 is integral error, see GPS_Steer() in PID
                         // .36 will give 45 deg correction at 120 ft XTE to emulate my Garmin GPSMAP 740s see PID tab, voidActual_Gps_Steering()
  float K_course_avg = .999; //used to smooth gps course in PID/ void Actual_GPS_Steering().999 will smooth over 1000 points
- int Maximum_Rudder = 42; // rudder in degrees
+ int Maximum_Rudder = 20; // rudder in degrees
  // User set motorspeedMIN around lines 359, 360, 371 for your controller type and rudder steering motor Use crtl-F to find motorspeedMIN 
  float Tack_Angle = 100;  // angle throug which boat will tack when tack L or R pressed (keys 4 and 6 in TACK mode(3)
- int Tack_rudder_MAX = 32;// limits rudder so it doesn't slow boat too much,  need to tune
+ int Tack_rudder_MAX = 20;// limits rudder so it doesn't slow boat too much,  need to tune
  float Tack_rudder_speed = .5; // rudder speed during tack , value * full speed, will use min of tack speed and regular speed, user adjust
- float MagVar_default =18.4;// 18.4 Seattle   User should keep up to date for loaction.  Pgm will use GPS value if available + east, - west
+ float MagVar_default =5 ;// 18.4 Seattle   User should keep up to date for loaction.  Pgm will use GPS value if available + east, - west
  boolean Serial_Remote_Is_Connected = 0  ; // 1 remote connected, 0 remote not connected Pgm hangs up if remote data is sent and remote is not connected
  boolean GPS_Auto_Steer = 1; // 0 will cause GPS steering to go to compass mode and maintain heading if waypoint reached. 
                              //  1 will cause GPS to automatically steer to next waypoint.  NOTE THIS CAN BE DANGEROUS
