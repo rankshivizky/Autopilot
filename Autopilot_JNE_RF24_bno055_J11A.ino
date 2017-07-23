@@ -166,7 +166,7 @@ COMMONS LICENSING
 
 #define Compass 1  //  0 for Pololu, 1 for BNO055
 #define GPS_Used 0 // 1 to include GPS code, 0 to exclude it
-#define Motor_Controller 2  // 1 for Pololu Qik dual controller, 2 for Pololu Trex dual controller, 3 for Pololu Simple Controller
+#define Motor_Controller 1  // 1 for Pololu Qik dual controller, 2 for Pololu Trex dual controller, 3 for Pololu Simple Controller
 #define Clutch_Solenoid 1 // 1 a clutch solenoid is used, 0 is not used, currently clutch solenoid does not work with single Simple Pololou Controller
 #define RUDDER_MODE 1 // 0 uses rudder position, 1 does not
 #define RF24_Attached 0 // 0 if RF 24 radio modules are not attached, 1 if they are used
@@ -306,10 +306,10 @@ char keys[ROWS][COLS] = {
   {'7','8','9'},
   {'*','0','#'}
 };
-//byte rowPins[ROWS] = {23,25,27,29,}; //connect to the row pinouts of the keypad
-//byte colPins[COLS] = {31,33,35}; //connect to the column pinouts of the keypad
-byte rowPins[ROWS] = {34,44,42,38}; //connect to the row pinouts of the keypad  JACK'S KEYPAD
-byte colPins[COLS] = {36,32,40}; //connect to the column pinouts of the keypad  JACK'S KEYPAD
+byte rowPins[ROWS] = {23,25,27,29,}; //connect to the row pinouts of the keypad
+byte colPins[COLS] = {31,33,35}; //connect to the column pinouts of the keypad
+//byte rowPins[ROWS] = {23,25,27,29,}; //connect to the row pinouts of the keypad  JACK'S KEYPAD
+//byte colPins[COLS] = {36,32,40}; //connect to the column pinouts of the keypad  JACK'S KEYPAD
 //byte rowPins[ROWS] = {25,35,33,29}; //Use these with Fritz Diagram 6C, note 9 less than jack's
 //byte colPins[COLS] = {27,23,31}; //Use these with Fritz Diagram 6C
 
